@@ -14,6 +14,7 @@ handler.requestHandler = async (req, res) =>{
     let per_page = req.query.per_page;
     let page = req.query.page;
     try {
+        // 这里写死
         const list_res = await fetcher.getContributorsList('pingcap', 'tidb', GITHUB_TOKEN, per_page, page);
         contributors = list_res.data
             contributors.forEach((contributor) => {
@@ -29,6 +30,7 @@ handler.requestHandler = async (req, res) =>{
             });
         res.send(result)
     } catch (err) {
+        res.send('ERROR!')
         console.log(err)
     }
 }
