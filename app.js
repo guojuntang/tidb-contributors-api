@@ -6,7 +6,6 @@ var logger = require('morgan');
 var cors = require('cors')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 require('dotenv').config()
 
@@ -26,7 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 if (!process.env.GITHUB_TOKEN){
   console.warn("You should set GITHUB_TOKEN in your environment variable before running.")
