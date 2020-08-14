@@ -1,5 +1,4 @@
 const fetcher = require('../fetcher')
-var Contributors = require('../data')
 
 require("dotenv").config();
 
