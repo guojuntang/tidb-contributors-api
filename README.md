@@ -5,6 +5,10 @@
 该脚本通过在后端添加Github Authorization Token来对数据进行抓取
 
 ## 2. 部署 
+安装依赖
+```
+npm install
+```
 ### 2.1 通过[expressjs](https://expressjs.com/)进行架设
 在部署时需要通过设定环境变量来设置Github API Token，例如在项目的根目录下创建.env文件并添加
 ```
